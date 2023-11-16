@@ -4,10 +4,14 @@
 {% endblock %}
 
 {% block content %}
-	 {% for todo in todos %}
- 	<a href="{% url 'details' todo.id %}"> {{ todo.title }}</a>
+    <div class="card">
+
+     {% for todo in todos %}
+ 	<a class="card-body" href="{% url 'details' todo.id %}"> {{ todo.title }}</a>
  	<h3> {{ todo.body}}</h3>
  	<h3> {{ todo.created }}</h3>
  {% endfor %}
+
+    </div>
 
 {% endblock %}

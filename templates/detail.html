@@ -6,8 +6,10 @@
 {% endblock %}
 
 {% block content %}
-	<p>{{ todo.title }}</p>
+	<h2>{{ todo.title }}</h2>
 	<p>{{ todo.body }}</p>
     <hr>
 	<h6>{{ todo.created }}</h6>
+    <br><br>
+    <a href="{% url 'delete' todo.id %}" class="btn btn-danger">Delete</a>
 {% endblock %}
