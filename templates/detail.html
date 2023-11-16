@@ -12,4 +12,5 @@
 	<h6>{{ todo.created }}</h6>
     <br><br>
     <a href="{% url 'delete' todo.id %}" class="btn btn-danger">Delete</a>
+    <a href="{% url 'update' todo.id %}" class="btn btn-info">Update</a>
 {% endblock %}
