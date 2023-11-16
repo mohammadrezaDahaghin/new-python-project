@@ -5,7 +5,7 @@
 
 {% block content %}
 	 {% for todo in todos %}
- 	<a href="/detail/{{ todo.id }}"> {{ todo.title }}</a>
+ 	<a href="{% url 'details' todo.id %}"> {{ todo.title }}</a>
  	<h3> {{ todo.body}}</h3>
  	<h3> {{ todo.created }}</h3>
  {% endfor %}
